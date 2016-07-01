@@ -12,7 +12,7 @@ Please refer to the base image's [documentation](https://github.com/fabric8io-im
 Features:
 
 * Karaf Version: **3.0.7**
-* Java Base image: **fabric8/java-centos-openjdk8-jre:1.1.4**
+* Java Base image: **fabric8/java-centos-openjdk8-jre:1.1.5**
 * Port: **8080**
 * User **admin** (Password: **admin**) has been added to access the admin
   applications */host-manager* and */manager*)
