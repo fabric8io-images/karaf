@@ -1,0 +1,34 @@
+---
+fish-pepper:
+  params:
+    - version
+  build: "1.1.0"
+  name: "fabric8/karaf"
+
+config:
+  version:
+    default:
+      from:
+        image: "fabric8/java-centos-openjdk8-jre:1.1.4"
+        repo: "https://github.com/fabric8io-images/java/tree/master/images/centos/openjdk8/jre"
+      url: "http://archive.apache.org/dist/karaf/${KARAF_VERSION}/apache-karaf-${KARAF_VERSION}.tar.gz"
+      roleFile:
+        file: "users.properties"
+        dir: "etc/"
+      toRemove:
+        - "README"
+    2.4:
+      version: "2.4.4"
+      fish-pepper:
+        mappings:
+          __users-acl.properties: "users.properties"
+    3.0:
+      version: "3.0.7"
+      fish-pepper:
+        mappings:
+          __users-noacl.properties: "users.properties"
+    4.0:
+      version: "4.0.5"
+      fish-pepper:
+        mappings:
+          __users-noacl.properties: "users.properties"
