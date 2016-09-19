@@ -9,5 +9,5 @@ if [ -d $DIR ]; then
   done
 fi
 # Use faster (though more unsecure) random number generator
-export KARAF_OPTS="$KARAF_OPTS $(/opt/run-java-options) -Djava.security.egd=file:/dev/./urandom"
+export KARAF_OPTS="$KARAF_OPTS $(/opt/run-java-options) $(/opt/java-container-options) $(/opt/debug-options)  -Djava.security.egd=file:/dev/./urandom"
 /opt/karaf/bin/karaf server
